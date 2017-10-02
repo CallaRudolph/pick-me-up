@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import thunkMiddleware from "redux-thunk";
 import { createLogger } from "redux-logger";
 import { HashRouter } from 'react-router-dom';
+import './images/favicon.ico';
 
 const loggerMiddleware = createLogger();
 

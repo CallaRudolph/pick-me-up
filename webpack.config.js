@@ -44,6 +44,17 @@ module.exports = {
             "react-hot-loader/babel"
           ]
         }
+      },
+      {
+        test: /\.(png|jpg|gif|ico)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
+        ]
       }
     ]
   },
@@ -52,6 +63,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
+      favicon: 'src/images/favicon.ico',
       template:'template.ejs',
       appMountId: 'react-app-root',
       title: 'Pick Me Up',
