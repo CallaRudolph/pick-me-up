@@ -1,11 +1,22 @@
 import React from 'react';
 
-function Input(props) {
-  return (
-    <div>
-      <p>This will be a form.</p>
-    </div>
-  );
+class Input extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit() {
+    console.log("button clicked");
+  }
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.handleSubmit}>Let's do this</button>
+      </div>
+    );
+  }
 }
 
 export default Input;
