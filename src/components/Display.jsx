@@ -3,16 +3,26 @@ import Input from './Input';
 import { connect } from 'react-redux';
 
 const Display = ({ dispatch, responses }) => {
+  let formAreaContent;
+  if (responses.forismatic === undefined) {
+    formAreaContent =
+    <Input/>
+  } else {
+    formAreaContent =
+    <div>
+      <h3><em>"{responses.forismatic.quoteText}"</em></h3>
+      <p>-{responses.forismatic.quoteAuthor}</p>
+    </div>
+  }
   return (
     <div>
-      <p>Display</p>
-      <Input/>
+      {formAreaContent}
     </div>
   );
 }
 
 const mapStateToProps = state => {
-  console.log(state.length);
+  console.log(state.forismatic);
   const responses = state;
   return {
     responses: responses
