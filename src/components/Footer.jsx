@@ -1,6 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-function Footer(props) {
+const Footer = ({ dispatch, responses }) => {
+  let formAreaContent;
+  if (responses.forismatic === undefined) {
+    formAreaContent = null
+  } else {
+    formAreaContent =
+    <div>
+      <p><em>"{responses.forismatic.quoteText}"</em>-{responses.forismatic.quoteAuthor}</p>
+    </div>
+  }
   var footer = {
     backgroundColor: "#F8F8F8",
     borderTop: "1px solid #E7E7E7",
@@ -9,7 +19,7 @@ function Footer(props) {
     position: "fixed",
     left: "0",
     bottom: "0",
-    height: "30px",
+    height: "40px",
     width: "100%",
     paddingTop: "5px"
   };
@@ -17,11 +27,19 @@ function Footer(props) {
     <div>
       <footer style={footer} className="footer">
         <div className="container">
-          <p><em>Feet</em></p>
+          {formAreaContent}
         </div>
       </footer>
     </div>
   );
 }
 
-export default Footer;
+const mapStateToProps = state => {
+  console.log(state.forismatic);
+  const responses = state;
+  return {
+    responses: responses
+  };
+};
+
+export default connect(mapStateToProps)(Footer);

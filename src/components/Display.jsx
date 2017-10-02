@@ -10,8 +10,7 @@ const Display = ({ dispatch, responses }) => {
   } else {
     formAreaContent =
     <div>
-      <h3><em>"{responses.forismatic.quoteText}"</em></h3>
-      <p>-{responses.forismatic.quoteAuthor}</p>
+      <p>stuff will be here soon, thanks</p>
     </div>
   }
   return (
