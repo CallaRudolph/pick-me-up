@@ -36,9 +36,9 @@ _Project’s Purpose or Goal: An app to visit when having a gloomy day._
 --------
 
 Component Structure:
-* App --> Header, Input, Footer
+* App --> Header, Display, Footer
 * Header --> Link display to About and Display Components
 * Footer --> some nice words
 * About --> About the project and myself
-* Input --> Input form for user to enter responses, Display component nested
-* Display --> Four API responses displayed
+* Display --> Four API responses displayed, Input component nested
+* Input --> Input form for user to enter responses
