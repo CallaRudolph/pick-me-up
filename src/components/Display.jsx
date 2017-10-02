@@ -5,13 +5,14 @@ import { connect } from 'react-redux';
 const Display = ({ dispatch, responses }) => {
   return (
     <div>
-      <p>Display</p>
+      <p><em>"{responses.forismatic.quoteText}"</em></p>
       <Input/>
     </div>
   );
 }
 
 const mapStateToProps = state => {
+  console.log(state);
   const responses = state;
   return {
     responses: responses

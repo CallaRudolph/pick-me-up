@@ -14,6 +14,17 @@ const forismatic = (state = defaultState, action) => {
         [action.forismaticId]: newForismatic
       });
       return newState;
+    case types.DISPLAY_FORISMATIC:
+      newForismatic = Object.assign({}, {
+        isFetching: false,
+        quoteText: action.quoteText,
+        quoteAuthor: action.quoteAuthor,
+        forismaticId: action.forismaticId
+      });
+      newState = Object.assign({}, {
+        ["forismatic"]: newForismatic
+      });
+      return newState;
     default:
       return state;
   }
