@@ -6,12 +6,13 @@ import { Provider } from 'react-redux';
 import thunkMiddleware from "redux-thunk";
 import { createLogger } from "redux-logger";
 import { HashRouter } from 'react-router-dom';
+import reducer from './reducers/forismatic-reducer';
 import './images/favicon.ico';
 
 const loggerMiddleware = createLogger();
 
 const store = createStore(
-  // reducer,
+  reducer,
   applyMiddleware(
     thunkMiddleware,
     loggerMiddleware
