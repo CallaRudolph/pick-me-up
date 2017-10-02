@@ -1,13 +1,21 @@
 import React from 'react';
 import Input from './Input';
+import { connect } from 'react-redux';
 
-function Display(props) {
+const Display = ({ dispatch, responses }) => {
   return (
     <div>
-      <p>Display!</p>
+      <p>Display</p>
       <Input/>
     </div>
   );
 }
 
-export default Display;
+const mapStateToProps = state => {
+  const responses = state;
+  return {
+    responses: responses
+  };
+};
+
+export default connect(mapStateToProps)(Display);
