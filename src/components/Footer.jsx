@@ -8,11 +8,11 @@ const Footer = ({ dispatch, responses }) => {
   } else {
     formAreaContent =
     <div>
-      <p><em>"{responses.forismatic.quoteText}"</em>-{responses.forismatic.quoteAuthor}</p>
+      <p><em>"{responses.forismatic.quoteText}"</em> -{responses.forismatic.quoteAuthor}</p>
     </div>
   }
   var footer = {
-    backgroundColor: "#F8F8F8",
+    backgroundColor: "#78BC61",
     borderTop: "1px solid #E7E7E7",
     textAlign: "center",
     padding: "20px",
