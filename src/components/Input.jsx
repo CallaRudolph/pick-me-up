@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+imprt { fetchResponse } from './../actions';
 
 class Input extends React.Component {
   constructor(props) {
@@ -7,7 +9,7 @@ class Input extends React.Component {
   }
 
   handleSubmit() {
-    console.log("button clicked");
+    this.props.dispatch(fetchResponse());
   }
 
   render() {
