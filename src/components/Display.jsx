@@ -8,13 +8,13 @@ const Display = ({ dispatch, forismatic, ron, foaas, dog }) => {
   const foaasResponse = foaas.foaas;
   const dogResponse = dog.dog;
   var catStyle = {
-    width: "300",
-    height: "300"
+    width: 300,
+    height: 300
   }
   var dogStyle = {
-    paddingLeft: "10",
-    maxWidth: "300",
-    maxHeight: "300"
+    paddingLeft: 10,
+    maxWidth: 300,
+    maxHeight: 300
   }
   var name = {
     textTransform: "capitalize"

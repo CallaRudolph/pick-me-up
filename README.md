@@ -6,7 +6,7 @@ _Project’s Purpose or Goal: An app to visit when having a gloomy day._
 
 * The user will enter in several keywords to be used for API calls: [x: something currently bothering the user, y:  number from 1-10, z: user name]
 
-* After submit, the app will make four API calls to retrieve: 1. a motivational quote, 2. a picture of a cat, 3. a fun statement to tell [x] to f*** off from [z], 4. a list of Ron Swanson quotes  based on number [y].
+* After submit, the app will make four API calls to retrieve: 1. a motivational quote, 2. a picture of a cat, 3. a fun statement to tell [x] to f*** off from [z], 4. a list of Ron Swanson quotes based on number [y], 5. a picture of a dog.
 
 * API responses will be beautifully-displayed throughout the app in a light-hearted way to help the user improve his mood.
 
@@ -16,7 +16,7 @@ _Project’s Purpose or Goal: An app to visit when having a gloomy day._
 
 * Bootstrap/CSS for custom styling.
 
-* API services: forismatic (motivational quote(https://forismatic.com/en/api/)), The Cat API (random cat photos(http://thecatapi.com/)), FOAAS (asks someone to f*** off, kindly(https://www.foaas.com/)), and Ron Swanson quotes API (https://github.com/jamesseanwright/ron-swanson-quotes).
+* API services: forismatic (motivational quote(https://forismatic.com/en/api/)), The Cat API (random cat photos(http://thecatapi.com/)), FOAAS (asks someone to f*** off, kindly(https://www.foaas.com/)), Ron Swanson quotes API (https://github.com/jamesseanwright/ron-swanson-quotes), and The Dog API (random dog photos(https://www.thedogapi.co.uk/documentation.php)).
 
 ##### If you finish developing the minimum viable product (MVP) with time to spare, what will you work on next? Describe these features here: Be specific.
 
