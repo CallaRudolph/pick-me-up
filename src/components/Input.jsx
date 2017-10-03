@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchForismatic, fetchRon, fetchFoaas } from './../actions';
+import { fetchForismatic, fetchRon, fetchFoaas, fetchDog } from './../actions';
 import { Button } from "react-bootstrap";
 import { Modal } from "react-bootstrap";
 
@@ -33,6 +33,7 @@ class Input extends React.Component {
     this.props.dispatch(fetchForismatic());
     this.props.dispatch(fetchRon(_rank.value));
     this.props.dispatch(fetchFoaas(_issue.value.trim(), _name.value.trim()));
+    this.props.dispatch(fetchDog());
   }
 
   render() {

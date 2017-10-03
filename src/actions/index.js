@@ -50,7 +50,7 @@ export function fetchRon(rank) {
     const ronQuotes = [];
     const ronId = v4();
     dispatch(requestRon(rank, ronId));
-    return fetch("http://ron-swanson-quotes.herokuapp.com/v2/quotes/" + rank
+    return fetch("https://ron-swanson-quotes.herokuapp.com/v2/quotes/" + rank
     ).then(
       response => response.json(),
       error => console.log("A Ron error occurred.", error)
@@ -88,7 +88,7 @@ export function fetchFoaas(issue, name) {
     let subtitle;
     const foaasId = v4();
     dispatch(requestFoaas(issue, name, foaasId));
-    return fetch("http://foaas.com/nugget/" + issue + "/" + name, {
+    return fetch("https://foaas.com/nugget/" + issue + "/" + name, {
       headers : {
         'Accept': 'application/json'
       }}).then(
@@ -103,6 +103,25 @@ export function fetchFoaas(issue, name) {
       } else {
         console.log("foaas error");
       }
+    });
+  };
+}
+
+export const requestDog = (dogId) => ({
+  type: types.REQUEST_DOG,
+  dogId: dogId
+});
+
+export function fetchDog() {
+  return function (dispatch) {
+    const dogId = v4();
+    dispatch(requestDog(dogId));
+    return fetch("https://api.thedogapi.co.uk/v2/dog.php"
+    ).then(
+      response => response.json(),
+      error => console.log("A Dog error occurred.", error)
+    ).then(function(json) {
+      console.log(json);
     });
   };
 }

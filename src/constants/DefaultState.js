@@ -10,5 +10,6 @@ export const defaultState = {
   issue: "Tony",
   name: "Calla",
   message: "FOAAS nugget message",
-  subtitle: "-Subtitle"
+  subtitle: "-Subtitle",
+  dogId: 0
 }
