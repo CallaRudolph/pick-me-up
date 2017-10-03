@@ -15,6 +15,16 @@ const ron = (state = defaultState, action) => {
         [action.ronId]: newRon
       });
       return newState;
+    case types.DISPLAY_RON:
+      newRon = Object.assign({}, {
+        isFetching: false,
+        ronQuotes: action.ronQuotes,
+        ronId: action.ronId
+      });
+      newState = Object.assign({}, {
+        ["ron"]: newRon
+      });
+      return newState;
     default:
       return state;
   }

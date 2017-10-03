@@ -14,6 +14,13 @@ const Display = ({ dispatch, responses }) => {
   } else {
     formAreaContent =
     <div>
+      <h4>Sorry things are crappy today. Ron Swanson has some thoughts for you:</h4>
+      <ul>
+        {responses.ron.ron.ronQuotes[0].map(function(ronQuote) {
+          return <li key={ronQuote}>{ronQuote}</li>
+        })
+      }
+      </ul>
       <a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif"/></a>
     </div>
   }
@@ -25,7 +32,7 @@ const Display = ({ dispatch, responses }) => {
 }
 
 const mapStateToProps = state => {
-  console.log(state.forismatic);
+  console.log(state);
   const responses = state;
   return {
     responses: responses
@@ -33,15 +40,3 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps)(Display);
-
-// if ({responses.length} < 1) {
-//   formAreaContent =
-//     <div>
-//       <Input/>
-//     </div>
-// } else {
-//   formAreaContent =
-//   <div>
-//     <p><em>""</em></p>
-//   </div>
-// }

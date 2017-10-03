@@ -27,7 +27,7 @@ export function fetchForismatic() {
         const quoteAuthor = json.quoteAuthor.trim();
         dispatch(displayForismatic(quoteText, quoteAuthor, forismaticId));
       } else {
-        console.log("error")
+        console.log("forismatic error")
       }
     });
   };
@@ -39,8 +39,15 @@ export const requestRon = (rank, ronId) => ({
   ronId: ronId
 });
 
+export const displayRon = (ronQuotes, ronId) => ({
+  type: types.DISPLAY_RON,
+  ronQuotes,
+  ronId
+});
+
 export function fetchRon(rank) {
   return function (dispatch) {
+    const ronQuotes = [];
     const ronId = v4();
     dispatch(requestRon(rank, ronId));
     return fetch("http://ron-swanson-quotes.herokuapp.com/v2/quotes/" + rank
@@ -48,7 +55,12 @@ export function fetchRon(rank) {
       response => response.json(),
       error => console.log("A Ron error occurred.", error)
     ).then(function(json) {
-      console.log(json);
+      if (json.length > 0) {
+        ronQuotes.push(json);
+        dispatch(displayRon(ronQuotes, ronId));
+      } else {
+        console.log("ron error!");
+      }
     });
   };
 }

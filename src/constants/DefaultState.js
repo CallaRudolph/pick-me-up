@@ -5,4 +5,5 @@ export const defaultState = {
   quoteAuthor: "Calla",
   rank: 1,
   ronId: 0,
+  ronQuotes: [],
 }
