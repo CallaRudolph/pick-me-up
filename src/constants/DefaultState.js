@@ -8,5 +8,7 @@ export const defaultState = {
   ronQuotes: [],
   foaasId: 0,
   issue: "Tony",
-  name: "Calla"
+  name: "Calla",
+  message: "FOAAS nugget message",
+  subtitle: "-Subtitle"
 }

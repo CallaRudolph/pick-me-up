@@ -2,9 +2,10 @@ import React from 'react';
 import Input from './Input';
 import { connect } from 'react-redux';
 
-const Display = ({ dispatch, forismatic, ron }) => {
+const Display = ({ dispatch, forismatic, ron, foaas }) => {
   let formAreaContent;
   const ronResponse = ron.ron;
+  const foaasResponse = foaas.foaas;
   if (forismatic.forismaticId === 0) {
     formAreaContent =
     <div>
@@ -21,6 +22,9 @@ const Display = ({ dispatch, forismatic, ron }) => {
         })
       }
       </ul>
+      <h4>Repeat this kind note in your head five times. Guaranteed to make things better:</h4>
+      <h5>{foaasResponse.message}</h5>
+      <h5>{foaasResponse.subtitle}</h5>
       <a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif"/></a>
     </div>
   }
@@ -35,9 +39,11 @@ const mapStateToProps = state => {
   console.log(state);
   const forismatic = state.forismatic;
   const ron = state.ron;
+  const foaas = state.foaas;
   return {
     forismatic: forismatic,
-    ron: ron
+    ron: ron,
+    foaas: foaas
   };
 };
 

@@ -73,8 +73,17 @@ export const requestFoaas = (issue, name, foaasId) => ({
   foaasId: foaasId
 });
 
+export const displayFoaas = (message, subtitle, foaasId) => ({
+  type: types.DISPLAY_FOAAS,
+  message,
+  subtitle,
+  foaasId
+});
+
 export function fetchFoaas(issue, name) {
   return function (dispatch) {
+    let message;
+    let subtitle;
     const foaasId = v4();
     dispatch(requestFoaas(issue, name, foaasId));
     return fetch("http://foaas.com/nugget/" + issue + "/" + name, {
@@ -84,7 +93,13 @@ export function fetchFoaas(issue, name) {
       response => response.json(),
       error => console.log("A Foaas error occurred.", error)
     ).then(function(json) {
-      console.log(json);
+      if (json.message != []) {
+        message = json.message;
+        subtitle = json.subtitle;
+        dispatch(displayFoaas(message, subtitle, foaasId));
+      } else {
+        console.log("foaas error");
+      }
     });
   };
 }
