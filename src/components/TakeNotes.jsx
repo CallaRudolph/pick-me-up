@@ -15,6 +15,7 @@ class TakeNotes extends React.Component {
       return;
     }
     this.props.dispatch(addNote(_note.value.trim()))
+    _note.value = "";
   }
 
   render() {
