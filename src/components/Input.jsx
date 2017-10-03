@@ -8,14 +8,22 @@ class Input extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit() {
+  handleSubmit(e) {
+    e.preventDefault();
+    let { _rank } = this.refs;
     this.props.dispatch(fetchForismatic());
+    console.log(_rank.value);
   }
 
   render() {
     return (
       <div>
-        <button onClick={this.handleSubmit}>Let's do this</button>
+        <form onSubmit={this.handleSubmit}>
+          <p>On a scale from 1-10, how sad are you?</p>
+          <input ref="_rank"></input>
+          <br/><br/>
+          <button>Let's do this</button>
+        </form>
       </div>
     );
   }

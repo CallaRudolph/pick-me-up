@@ -6,11 +6,13 @@ const Display = ({ dispatch, responses }) => {
   let formAreaContent;
   if (responses.forismatic === undefined) {
     formAreaContent =
-    <Input/>
+    <div>
+      <h4>I get it, life is tough sometimes. Come on in and let's get happy.</h4>
+      <Input/>
+    </div>
   } else {
     formAreaContent =
     <div>
-      <p>stuff will be here soon, thanks</p>
       <a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif"/></a>
     </div>
   }
