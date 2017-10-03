@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchForismatic } from './../actions';
+import { fetchForismatic, fetchRon } from './../actions';
 
 class Input extends React.Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class Input extends React.Component {
     e.preventDefault();
     let { _rank } = this.refs;
     this.props.dispatch(fetchForismatic());
-    console.log(_rank.value);
+    this.props.dispatch(fetchRon(_rank.value));
   }
 
   render() {

@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 
 const Display = ({ dispatch, responses }) => {
   let formAreaContent;
-  if (responses.forismatic === undefined) {
+  console.log(responses);
+  if (responses.forismatic.forismaticId === 0) {
     formAreaContent =
     <div>
       <h4>I get it, life is tough sometimes. Come on in and let's get happy.</h4>

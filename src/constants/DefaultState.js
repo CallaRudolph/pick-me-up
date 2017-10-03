@@ -3,4 +3,6 @@ export const defaultState = {
   forismaticId: 0,
   quoteText: "Inspirational quotes are lovely.",
   quoteAuthor: "Calla",
+  rank: 1,
+  ronId: 0,
 }

@@ -32,3 +32,23 @@ export function fetchForismatic() {
     });
   };
 }
+
+export const requestRon = (rank, ronId) => ({
+  type: types.REQUEST_RON,
+  rank: rank,
+  ronId: ronId
+});
+
+export function fetchRon(rank) {
+  return function (dispatch) {
+    const ronId = v4();
+    dispatch(requestRon(rank, ronId));
+    return fetch("http://ron-swanson-quotes.herokuapp.com/v2/quotes/" + rank
+    ).then(
+      response => response.json(),
+      error => console.log("A Ron error occurred.", error)
+    ).then(function(json) {
+      console.log(json);
+    });
+  };
+}
