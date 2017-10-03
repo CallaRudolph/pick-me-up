@@ -14,17 +14,16 @@ const dog = (state = defaultState, action) => {
         [action.dogId]: newDog
       });
       return newState;
-    // case types.DISPLAY_FORISMATIC:
-    //   newForismatic = Object.assign({}, {
-    //     isFetching: false,
-    //     quoteText: action.quoteText,
-    //     quoteAuthor: action.quoteAuthor,
-    //     forismaticId: action.forismaticId
-    //   });
-    //   newState = Object.assign({}, {
-    //     ["forismatic"]: newForismatic
-    //   });
-    //   return newState;
+    case types.DISPLAY_DOG:
+      newDog = Object.assign({}, {
+        isFetching: false,
+        dogImage: action.dogImage,
+        dogId: action.dogId
+      });
+      newState = Object.assign({}, {
+        ["dog"]: newDog
+      });
+      return newState;
     default:
       return state;
   }

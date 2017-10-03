@@ -112,8 +112,15 @@ export const requestDog = (dogId) => ({
   dogId: dogId
 });
 
+export const displayDog = (dogImage, dogId) => ({
+  type: types.DISPLAY_DOG,
+  dogImage,
+  dogId
+});
+
 export function fetchDog() {
   return function (dispatch) {
+    let dogImage;
     const dogId = v4();
     dispatch(requestDog(dogId));
     return fetch("https://api.thedogapi.co.uk/v2/dog.php"
@@ -121,7 +128,12 @@ export function fetchDog() {
       response => response.json(),
       error => console.log("A Dog error occurred.", error)
     ).then(function(json) {
-      console.log(json);
+      if (json.count > 0) {
+        dogImage = json.data[0].url;
+        dispatch(displayDog(dogImage, dogId));
+      } else {
+        console.log("dog error");
+      }
     });
   };
 }

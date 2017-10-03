@@ -5,3 +5,4 @@ export const DISPLAY_RON = "DISPLAY_RON";
 export const REQUEST_FOAAS = "REQUEST_FOAAS";
 export const DISPLAY_FOAAS = "DISPLAY_FOAAS";
 export const REQUEST_DOG = "REQUEST_DOG";
+export const DISPLAY_DOG = "DISPLAY_DOG";

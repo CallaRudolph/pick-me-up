@@ -11,5 +11,6 @@ export const defaultState = {
   name: "Calla",
   message: "FOAAS nugget message",
   subtitle: "-Subtitle",
-  dogId: 0
+  dogId: 0,
+  dogImage: "image.jpg"
 }

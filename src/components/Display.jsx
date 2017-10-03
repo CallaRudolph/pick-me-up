@@ -2,10 +2,20 @@ import React from 'react';
 import Input from './Input';
 import { connect } from 'react-redux';
 
-const Display = ({ dispatch, forismatic, ron, foaas }) => {
+const Display = ({ dispatch, forismatic, ron, foaas, dog }) => {
   let formAreaContent;
   const ronResponse = ron.ron;
   const foaasResponse = foaas.foaas;
+  const dogResponse = dog.dog;
+  var catStyle = {
+    width: "300",
+    height: "300"
+  }
+  var dogStyle = {
+    paddingLeft: "10",
+    width: "300",
+    height: "300"
+  }
   if (forismatic.forismaticId === 0) {
     formAreaContent =
     <div>
@@ -25,7 +35,8 @@ const Display = ({ dispatch, forismatic, ron, foaas }) => {
       <h4>Repeat this kind note in your head five times. Guaranteed to make things better:</h4>
       <h5>{foaasResponse.message}</h5>
       <h5>{foaasResponse.subtitle}</h5>
-      <a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif"/></a>
+      <a href="http://thecatapi.com"><img style={catStyle} src="http://thecatapi.com/api/images/get?format=src&type=gif"/></a>
+      <img style={dogStyle} src={dogResponse.dogImage}/>
     </div>
   }
   return (
@@ -40,10 +51,12 @@ const mapStateToProps = state => {
   const forismatic = state.forismatic;
   const ron = state.ron;
   const foaas = state.foaas;
+  const dog = state.dog;
   return {
     forismatic: forismatic,
     ron: ron,
-    foaas: foaas
+    foaas: foaas,
+    dog: dog
   };
 };
 
