@@ -11,6 +11,7 @@ const Display = ({ dispatch, responses }) => {
     formAreaContent =
     <div>
       <p>stuff will be here soon, thanks</p>
+      <a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif"/></a>
     </div>
   }
   return (
