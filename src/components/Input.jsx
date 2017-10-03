@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchForismatic, fetchRon, fetchFoaas } from './../actions';
+import { Button } from "react-bootstrap";
 import { Modal } from "react-bootstrap";
 
 class Input extends React.Component {
@@ -37,12 +38,16 @@ class Input extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.showFormModal}>Let's do this</button>
+        <Button
+          bsStyle="success"
+          onClick={this.showFormModal}>
+          Let's do this
+        </Button>
         <Modal
           show={this.state.formModalVisible}
           onHide={this.hideFormModal}>
           <Modal.Body>
-            <form onSubmit={this.handleSubmit}>
+            <form>
               <p>On a scale from 1-10, how sad are you?</p>
               <input ref="_rank"></input>
               <br/><br/>
@@ -52,7 +57,11 @@ class Input extends React.Component {
               <p>And what's yr name?</p>
               <input ref="_name"></input>
               <br/><br/>
-              <button>Let's do this</button>
+              <Button
+                bsStyle="success"
+                onClick={this.handleSubmit}>
+                Happiness awaits
+              </Button>
             </form>
           </Modal.Body>
         </Modal>
