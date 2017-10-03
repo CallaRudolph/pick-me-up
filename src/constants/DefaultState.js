@@ -6,4 +6,7 @@ export const defaultState = {
   rank: 1,
   ronId: 0,
   ronQuotes: [],
+  foaasId: 0,
+  issue: "Tony",
+  name: "Calla"
 }

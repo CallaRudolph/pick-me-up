@@ -65,3 +65,26 @@ export function fetchRon(rank) {
     });
   };
 }
+
+export const requestFoaas = (issue, name, foaasId) => ({
+  type: types.REQUEST_FOAAS,
+  issue: issue,
+  name: name,
+  foaasId: foaasId
+});
+
+export function fetchFoaas(issue, name) {
+  return function (dispatch) {
+    const foaasId = v4();
+    dispatch(requestFoaas(issue, name, foaasId));
+    return fetch("http://foaas.com/nugget/" + issue + "/" + name, {
+      headers : {
+        'Accept': 'application/json'
+      }}).then(
+      response => response.json(),
+      error => console.log("A Foaas error occurred.", error)
+    ).then(function(json) {
+      console.log(json);
+    });
+  };
+}

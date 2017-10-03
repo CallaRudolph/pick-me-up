@@ -1,10 +1,12 @@
 import { combineReducers } from "redux";
 import forismatic from "./forismatic-reducer";
 import ron from "./ron-reducer";
+import foaas from "./foaas-reducer";
 
 const rootReducer = combineReducers({
   forismatic,
-  ron
+  ron,
+  foaas
 });
 
 export default rootReducer;
