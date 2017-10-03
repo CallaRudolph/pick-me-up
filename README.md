@@ -16,7 +16,7 @@ _Project’s Purpose or Goal: An app to visit when having a gloomy day._
 
 * Bootstrap/CSS for custom styling.
 
-* API services: forismatic (motivational quote), The Cat API (random cat photos), FOAAS (asks someone to f*** off, kindly), and Ron Swanson quotes API.
+* API services: forismatic (motivational quote(https://forismatic.com/en/api/)), The Cat API (random cat photos(http://thecatapi.com/)), FOAAS (asks someone to f*** off, kindly(https://www.foaas.com/)), and Ron Swanson quotes API (https://github.com/jamesseanwright/ron-swanson-quotes).
 
 ##### If you finish developing the minimum viable product (MVP) with time to spare, what will you work on next? Describe these features here: Be specific.
 

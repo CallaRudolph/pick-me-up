@@ -27,7 +27,7 @@ export function fetchForismatic() {
         const quoteAuthor = json.quoteAuthor.trim();
         dispatch(displayForismatic(quoteText, quoteAuthor, forismaticId));
       } else {
-        console.log("forismatic error")
+        console.log("forismatic error");
       }
     });
   };
@@ -55,11 +55,12 @@ export function fetchRon(rank) {
       response => response.json(),
       error => console.log("A Ron error occurred.", error)
     ).then(function(json) {
-      if (json.length > 0) {
+      if (json[0] != "0") {
         ronQuotes.push(json);
         dispatch(displayRon(ronQuotes, ronId));
       } else {
-        console.log("ron error!");
+        ronQuotes.push(["A zero? Yr not really sad then..."]);
+        dispatch(displayRon(ronQuotes, ronId));
       }
     });
   };
