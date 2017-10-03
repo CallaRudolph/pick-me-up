@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { addNote } from './../actions';
 
 class TakeNotes extends React.Component {
   constructor(props) {
@@ -9,7 +11,10 @@ class TakeNotes extends React.Component {
   handleNewNote(e) {
     e.preventDefault();
     let { _note } = this.refs;
-    console.log(_note.value);
+    if (!_note.value.trim()) {
+      return;
+    }
+    this.props.dispatch(addNote(_note.value.trim()))
   }
 
   render() {
@@ -25,4 +30,4 @@ class TakeNotes extends React.Component {
   }
 }
 
-export default TakeNotes;
+export default connect()(TakeNotes);

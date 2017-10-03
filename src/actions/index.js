@@ -131,9 +131,14 @@ export function fetchDog() {
         dogImage = json.data[0].url;
         dispatch(displayDog(dogImage, dogId));
       } else {
-
         console.log("dog error");
       }
     });
   };
 }
+
+export const addNote = (note) => ({
+  type: types.ADD_NOTE,
+  note: note,
+  id: v4()
+});

@@ -6,3 +6,4 @@ export const REQUEST_FOAAS = "REQUEST_FOAAS";
 export const DISPLAY_FOAAS = "DISPLAY_FOAAS";
 export const REQUEST_DOG = "REQUEST_DOG";
 export const DISPLAY_DOG = "DISPLAY_DOG";
+export const ADD_NOTE = "ADD_NOTE";
