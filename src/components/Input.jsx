@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchForismatic, fetchRon } from './../actions';
+import { fetchForismatic, fetchRon, fetchFoaas } from './../actions';
 
 class Input extends React.Component {
   constructor(props) {
@@ -10,9 +10,10 @@ class Input extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let { _rank } = this.refs;
+    let { _rank, _issue, _name } = this.refs;
     this.props.dispatch(fetchForismatic());
     this.props.dispatch(fetchRon(_rank.value));
+    this.props.dispatch(fetchFoaas(_issue.value, _name.value));
   }
 
   render() {
@@ -21,6 +22,12 @@ class Input extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <p>On a scale from 1-10, how sad are you?</p>
           <input ref="_rank"></input>
+          <br/><br/>
+          <p>Give me the name of someone or something that is currently bugging you:</p>
+          <input ref="_issue"></input>
+          <br/><br/>
+          <p>And what's yr name?</p>
+          <input ref="_name"></input>
           <br/><br/>
           <button>Let's do this</button>
         </form>
