@@ -73,11 +73,10 @@ export const requestFoaas = (issue, name, foaasId) => ({
   foaasId: foaasId
 });
 
-export const displayFoaas = (name, message, subtitle, foaasId) => ({
+export const displayFoaas = (name, message, foaasId) => ({
   type: types.DISPLAY_FOAAS,
   name,
   message,
-  subtitle,
   foaasId
 });
 
@@ -98,8 +97,7 @@ export function fetchFoaas(issue, name) {
       if (json.message != []) {
         messagePeriod = json.message;
         message = messagePeriod.replace(/\./g, "?");
-        subtitle = json.subtitle;
-        dispatch(displayFoaas(name, message, subtitle, foaasId));
+        dispatch(displayFoaas(name, message, foaasId));
       } else {
         console.log("foaas error");
       }
@@ -120,6 +118,7 @@ export const displayDog = (dogImage, dogId) => ({
 
 export function fetchDog() {
   return function (dispatch) {
+    let Ollie;
     let dogImage;
     const dogId = v4();
     dispatch(requestDog(dogId));
@@ -132,6 +131,7 @@ export function fetchDog() {
         dogImage = json.data[0].url;
         dispatch(displayDog(dogImage, dogId));
       } else {
+
         console.log("dog error");
       }
     });

@@ -10,7 +10,6 @@ export const defaultState = {
   issue: "Tony",
   name: "Calla",
   message: "FOAAS nugget message",
-  subtitle: "-Subtitle",
   dogId: 0,
   dogImage: "image.jpg"
 }

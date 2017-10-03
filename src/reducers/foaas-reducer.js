@@ -21,7 +21,6 @@ const foaas = (state = defaultState, action) => {
         isFetching: false,
         name: action.name,
         message: action.message,
-        subtitle: action.subtitle,
         foaasId: action.foaasId
       });
       newState = Object.assign({}, {

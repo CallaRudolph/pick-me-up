@@ -13,8 +13,11 @@ const Display = ({ dispatch, forismatic, ron, foaas, dog }) => {
   }
   var dogStyle = {
     paddingLeft: "10",
-    width: "300",
-    height: "300"
+    maxWidth: "300",
+    maxHeight: "300"
+  }
+  var name = {
+    textTransform: "capitalize"
   }
   if (forismatic.forismaticId === 0) {
     formAreaContent =
@@ -25,16 +28,18 @@ const Display = ({ dispatch, forismatic, ron, foaas, dog }) => {
   } else {
     formAreaContent =
     <div>
-      <h4>Sorry things are crappy today, {foaasResponse.name}. Ron Swanson has some thoughts for you:</h4>
+      <h4>Sorry things are crappy today, <span style={name}>{foaasResponse.name}</span>. Ron Swanson has some thoughts for you:</h4>
       <ul>
         {ronResponse.ronQuotes[0].map(function(ronQuote) {
           return <li key={ronQuote}>{ronQuote}</li>
         })
       }
       </ul>
+      <br/><br/><br/>
       <h4>Repeat this kind note in your head five times. Guaranteed to make things better:</h4>
       <h5>{foaasResponse.message}</h5>
-      <h5>{foaasResponse.subtitle}</h5>
+      <h5>- <span style={name}>{foaasResponse.name}</span></h5>
+      <br/>
       <a href="http://thecatapi.com"><img style={catStyle} src="http://thecatapi.com/api/images/get?format=src&type=gif"/></a>
       <img style={dogStyle} src={dogResponse.dogImage}/>
     </div>
