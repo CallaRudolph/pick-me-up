@@ -5,15 +5,20 @@ import { connect } from 'react-redux';
 const Notes = ({ notes }) => {
   return (
     <div>
-      <p>Soon you'll be able to take notes here.</p>
       <TakeNotes/>
+    <ul>
+      {notes.map(function(note) {
+        return <li key={note.id}>{note.note}</li>
+        })
+      }
+    </ul>
     </div>
   );
 }
 
 const mapStateToProps = state => {
-  console.log(state);
   const notes = state.note;
+  console.log(notes);
   return {
     notes: notes
   }
