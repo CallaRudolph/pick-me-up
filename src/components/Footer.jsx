@@ -3,13 +3,12 @@ import { connect } from 'react-redux';
 
 const Footer = ({ dispatch, responses }) => {
   let formAreaContent;
-  console.log(responses);
-  if (responses.forismatic.forismaticId === 0) {
+  if (responses.forismaticId === 0) {
     formAreaContent = null
   } else {
     formAreaContent =
     <div>
-      <p><em>"{responses.forismatic.forismatic.quoteText}"</em> -{responses.forismatic.forismatic.quoteAuthor}</p>
+      <p><em>"{responses.forismatic.quoteText}"</em> -{responses.forismatic.quoteAuthor}</p>
     </div>
   }
   var footer = {
@@ -36,8 +35,7 @@ const Footer = ({ dispatch, responses }) => {
 }
 
 const mapStateToProps = state => {
-  console.log(state.forismatic);
-  const responses = state;
+  const responses = state.forismatic;
   return {
     responses: responses
   };
