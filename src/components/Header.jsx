@@ -19,7 +19,7 @@ function Header(props) {
           <h2 style={h2}>Pick Me Up</h2>
         </div>
         <div style={link} className="nav navbar-nav navbar-right">
-          <p><Link to="/about">About</Link> | <Link to="/">Get Well</Link></p>
+          <p><Link to="/about">About</Link> | <Link to="/">Get Well</Link> | <Link to="/notes">Notes</Link></p>
         </div>
       </div>
     </div>
