@@ -11,9 +11,15 @@ class Input extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let { _rank, _issue, _name } = this.refs;
+    if (!_issue.value.trim()) {
+      return;
+    }
+    if (!_name.value.trim()) {
+      return;
+    }
     this.props.dispatch(fetchForismatic());
     this.props.dispatch(fetchRon(_rank.value));
-    this.props.dispatch(fetchFoaas(_issue.value, _name.value));
+    this.props.dispatch(fetchFoaas(_issue.value.trim(), _name.value.trim()));
   }
 
   render() {
