@@ -73,8 +73,9 @@ export const requestFoaas = (issue, name, foaasId) => ({
   foaasId: foaasId
 });
 
-export const displayFoaas = (message, subtitle, foaasId) => ({
+export const displayFoaas = (name, message, subtitle, foaasId) => ({
   type: types.DISPLAY_FOAAS,
+  name,
   message,
   subtitle,
   foaasId
@@ -98,7 +99,7 @@ export function fetchFoaas(issue, name) {
         messagePeriod = json.message;
         message = messagePeriod.replace(/\./g, "?");
         subtitle = json.subtitle;
-        dispatch(displayFoaas(message, subtitle, foaasId));
+        dispatch(displayFoaas(name, message, subtitle, foaasId));
       } else {
         console.log("foaas error");
       }

@@ -15,7 +15,7 @@ const Display = ({ dispatch, forismatic, ron, foaas }) => {
   } else {
     formAreaContent =
     <div>
-      <h4>Sorry things are crappy today. Ron Swanson has some thoughts for you:</h4>
+      <h4>Sorry things are crappy today, {foaasResponse.name}. Ron Swanson has some thoughts for you:</h4>
       <ul>
         {ronResponse.ronQuotes[0].map(function(ronQuote) {
           return <li key={ronQuote}>{ronQuote}</li>

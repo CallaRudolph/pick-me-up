@@ -19,6 +19,7 @@ const foaas = (state = defaultState, action) => {
     case types.DISPLAY_FOAAS:
       newFoaas = Object.assign({}, {
         isFetching: false,
+        name: action.name,
         message: action.message,
         subtitle: action.subtitle,
         foaasId: action.foaasId
