@@ -21,10 +21,11 @@ class TakeNotes extends React.Component {
   render() {
     return (
       <div>
+        <h4>Sometimes it helps to write things out. Have a rage fest with yr keyboard here.</h4>
         <form onSubmit={this.handleNewNote}>
           <textarea rows="5" cols="90" ref="_note"></textarea>
           <br/>
-          <button>Mark it</button>
+          <button>let it go</button>
         </form>
       </div>
     );

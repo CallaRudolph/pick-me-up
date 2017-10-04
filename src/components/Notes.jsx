@@ -3,15 +3,21 @@ import TakeNotes from './TakeNotes';
 import { connect } from 'react-redux';
 
 const Notes = ({ notes }) => {
+  var noteStyle = {
+    marginTop: 20,
+    color: "blue",
+    paddingLeft: 8
+  }
   return (
     <div>
       <TakeNotes/>
-    <ul>
-      {notes.map(function(note) {
-        return <li key={note.id}>{note.note}</li>
-        })
-      }
-    </ul>
+      <br/><br/><br/>
+      <ul>
+        {notes.map(function(note) {
+          return <li className="panel panel-default list-unstyled" style={noteStyle} key={note.id}>{note.note}</li>
+          })
+        }
+      </ul>
     </div>
   );
 }
