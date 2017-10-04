@@ -43,7 +43,7 @@ class NoteDetail extends React.Component {
         <p className="panel-heading">{this.props.note}</p>
         <div className="row">
           <p className="col-md-6" style={time}><em>({this.props.date})</em></p>
-          <Button style={button} className="col-md-6" bsSize="xs" onClick={() => {this.handleDeletingNote(this.props.id)}} >remove </Button>
+          <Button style={button} className="col-md-6" bsSize="xs" onClick={() => {this.handleDeletingNote(this.props.id)}} >remove</Button>
         </div>
       </div>
     );

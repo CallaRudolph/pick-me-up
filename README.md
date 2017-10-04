@@ -1,4 +1,4 @@
-# Pick Me Up
+![icon](src/images/icon.png)
 
 ## ReactJS Capstone Project for Epicodus, October 5, 2017
 **_By Calla Rudolph_ [(e-mail me here)](<mailto:callarudolph@gmail.com>)**
