@@ -22,6 +22,9 @@ const Display = ({ dispatch, forismatic, ron, foaas, dog }) => {
   var name = {
     textTransform: "capitalize"
   }
+  var center = {
+    textAlign: "center"
+  }
   if (forismatic.forismaticId === 0) {
     formAreaContent =
     <div>
@@ -45,10 +48,12 @@ const Display = ({ dispatch, forismatic, ron, foaas, dog }) => {
       <p>- <span style={name}>{foaasResponse.name}</span></p>
       <br/><br/><br/>
       <hr/>
-      <a href="http://thecatapi.com"><img style={catStyle} src="http://thecatapi.com/api/images/get?format=src&type=gif"/></a>
-      <img style={dogStyle} src={dogResponse.dogImage}/>
-      <a href="http://thecatapi.com"><img style={catStyle} src="http://thecatapi.com/api/images/get?format=src&type=gif"/></a>
-      <br/><br/><br/>
+      <div style={center}>
+        <a href="http://thecatapi.com"><img style={catStyle} src="http://thecatapi.com/api/images/get?format=src&type=gif"/></a>
+        <img style={dogStyle} src={dogResponse.dogImage}/>
+        <a href="http://thecatapi.com"><img style={catStyle} src="http://thecatapi.com/api/images/get?format=src&type=gif"/></a>
+        <br/><br/><br/>
+      </div>
     </div>
   }
   return (
