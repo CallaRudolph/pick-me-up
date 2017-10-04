@@ -34,7 +34,7 @@ class Input extends React.Component {
     this.props.dispatch(fetchRon(_rank.value));
     this.props.dispatch(fetchFoaas(_issue.value.trim(), _name.value.trim()));
     this.props.dispatch(fetchDog());
-      this.setState({formModalVisible: false});
+    this.setState({formModalVisible: false});
   }
 
   render() {
