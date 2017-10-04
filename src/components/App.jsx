@@ -11,7 +11,7 @@ import Woods from './../images/woods.jpg';
 function App(props) {
   var backgroundStyle = {
     backgroundImage: "url(" + Woods + ")",
-    position: "fixed",
+    position: "absolute",
     backgroundSize: "cover",
     top: 0,
     left: 0,

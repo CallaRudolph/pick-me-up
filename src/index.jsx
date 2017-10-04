@@ -24,7 +24,7 @@ try {
   retrievedNote = [];
 }
 
-defaultState.note = retrievedNote;
+defaultState.notes = retrievedNote;
 
 const store = createStore(
   reducer,

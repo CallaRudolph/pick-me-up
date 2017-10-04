@@ -26,7 +26,12 @@ class TakeNotes extends React.Component {
   render() {
     var button = {
       width: 300,
-      marginLeft: 170
+      marginLeft: 170,
+      background: "rgba(20, 300, 54, .1)",
+      color: "#176117",
+      textShadow: "1px 0px grey",
+      border: "1px solid grey",
+      fontSize: 13
     }
     return (
       <div>

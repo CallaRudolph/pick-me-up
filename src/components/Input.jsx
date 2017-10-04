@@ -37,6 +37,12 @@ class Input extends React.Component {
   }
 
   render() {
+    var button = {
+      background: "rgba(20, 100, 54, .2)",
+      color: "#1b6f1b",
+      textShadow: "0px 0px 1px white",
+      border: "1px solid grey"
+    }
     return (
       <div>
         <form>
@@ -50,7 +56,7 @@ class Input extends React.Component {
           <input ref="_name"></input>
           <br/><br/>
           <Button
-            bsStyle="success"
+            style={button}
             onClick={this.handleSubmit}>
             Happiness awaits
           </Button>

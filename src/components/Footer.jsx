@@ -12,7 +12,7 @@ const Footer = ({ dispatch, responses }) => {
     </div>
   }
   var footer = {
-    backgroundColor: "#78BC61",
+    background: "rgba(20, 200, 54, .1)",
     borderTop: "1px solid #E7E7E7",
     textAlign: "center",
     padding: "20px",
@@ -21,7 +21,8 @@ const Footer = ({ dispatch, responses }) => {
     bottom: "0",
     height: "40px",
     width: "100%",
-    paddingTop: "5px"
+    paddingTop: "5px",
+    color: "white"
   };
   return (
     <div>
