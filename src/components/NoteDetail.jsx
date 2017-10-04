@@ -5,9 +5,13 @@ function NoteDetail(props) {
   var time = {
     fontSize: 10
   }
-  
+  var note = {
+    maxWidth: 651,
+    boxShadow: "1px 1px green"
+  }
+
   return(
-    <div className="panel">
+    <div style={note} className="panel">
       <p className="panel-heading">{props.note}</p>
       <p style={time}><em>({props.date})</em></p>
     </div>
