@@ -1,47 +1,62 @@
-## Pick Me Up
+# Pick Me Up
 
-_Project’s Purpose or Goal: An app to visit when having a gloomy day._
+## ReactJS Capstone Project for Epicodus, October 5, 2017
+**_By Calla Rudolph_ [(e-mail me here)](<mailto:callarudolph@gmail.com>)**
 
-###### List the absolute minimum features the project requires to meet this purpose or goal:
+## Description
+This is an app to visit when having a gloomy day. The user can input a range of how sad he is feeling, as well as his name and something that is bothering him. The app will then make five API calls to display uplifting quotes, statements, and photos to encourage the user to feel better. There is a notes section for the user to write out how he is feeling, in order to release upsetting thoughts from his mind.
 
-* The user will enter in several keywords to be used for API calls: [x: something currently bothering the user, y:  number from 1-10, z: user name]
+This app uses ReactJS with Redux to save user input and make API calls with Thunk Middleware. Persistent data is also stored through Middleware. React-Router and UUID are utilized for component transitions and unique state keys.
 
-* After submit, the app will make four API calls to retrieve: 1. a motivational quote, 2. a picture of a cat, 3. a fun statement to tell [x] to f*** off from [z], 4. a list of Ron Swanson quotes based on number [y], 5. a picture of a dog.
+## Prerequisites
+* [Node.js](https://nodejs.org/) (with NPM)
+* In order to successfully make API calls to these APIs, make sure your browser (Chrome preferred) has a [CORS extension](https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc) installed and enabled
 
-* API responses will be beautifully-displayed throughout the app in a light-hearted way to help the user improve his mood.
+## Installation Instructions
+* Open Terminal and type:
+* `$ cd Desktop`
+* `$ git clone https://github.com/CallaRudolph/pick-me-up`
+* `$ cd pick-me-up`
+* `$ npm install`
+* `$ atom .`
 
-##### What tools, frameworks, libraries, APIs, modules and/or other resources (whatever is specific to your track, and your language) will you use to create this MVP? List them all here. Be specific.
+### Serving Program
+* In Terminal, run `$ npm run start`
+* In your Browser (Chrome preferred) navigate to [http://localhost:8080/](http://localhost:8080/)
 
-* ReactJS with Redux to save user input and make API calls with Thunk Middleware, Node.js for dependencies, Webpack and Babel for transpiling and loading into browser.  
+## Technologies used
+* [Node.js](https://nodejs.org/) (with NPM)
+* [ReactJS](https://facebook.github.io/react/)
+* [Redux](http://redux.js.org/)
+* [Webpack](https://webpack.js.org/)
+* [Babel](https://babeljs.io/)
+* Bootstrap/CSS
+* HTML
 
-* Bootstrap/CSS for custom styling.
+## API Shout Outs
 
-* API services: forismatic (motivational quote(https://forismatic.com/en/api/)), The Cat API (random cat photos(http://thecatapi.com/)), FOAAS (asks someone to f*** off, kindly(https://www.foaas.com/)), Ron Swanson quotes API (https://github.com/jamesseanwright/ron-swanson-quotes), and The Dog API (random dog photos(https://www.thedogapi.co.uk/documentation.php)).
+* [forismatic](https://forismatic.com/en/api/) ~ motivational quotes
+* [The Cat API](http://thecatapi.com/) ~ random cat photos
+* [FOAAS](https://www.foaas.com/) ~ asks someone to f--- off, kindly
+* [Ron Swanson quotes](https://github.com/jamesseanwright/ron-swanson-quotes)
+* [The Dog API](random dog photos(https://www.thedogapi.co.uk/documentation.php) ~ random dog photos
 
-##### If you finish developing the minimum viable product (MVP) with time to spare, what will you work on next? Describe these features here: Be specific.
+## Future Functionality
 
-* Add Modal feature for user input form.
-* Blog feature for user to type up some daily issues.
 * The ability to save enlightening motivational quotes and other API responses.
 * Additional inputs for extra user information to make extra API calls (i.e. comfort food and location to search for restaurants and meetups nearby)
 * UI Animations & Interactivity, such as Router Transitions
 
-##### What additional tools, frameworks, libraries, APIs, or other resources will these additional features require?
+What additional tools, frameworks, libraries, APIs, or other resources will these additional features require?
 
 * Yelp API (oAuth)
 * Meetup API (oAuth)
-* Custom middleware to persist data locally (such as saved API responses or blog entries)
-* Additional research for more APIs through programmableweb.com
-
---------
-
-Component Structure:
-* App --> Header, Display, Footer
-* Header --> Link display to About and Display Components
-* Footer --> some nice words
-* About --> About the project and myself
-* Display --> Four API responses displayed, Input component nested
-* Input --> Input form for user to enter responses
+* Firebase to save API responses
 
 
-## You will need the Allow-Control-Allow-Origin extension for your browser.
+## License Information
+**Copyright &copy; 2017 Calla Rudolph**
+
+_Please email me at the above address with any comments or improvements you have found!_
+
+This software is licensed under the MIT license.
