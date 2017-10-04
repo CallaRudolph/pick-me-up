@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addNote } from './../actions';
+import { Button } from "react-bootstrap";
 
 class TakeNotes extends React.Component {
   constructor(props) {
@@ -19,13 +20,17 @@ class TakeNotes extends React.Component {
   }
 
   render() {
+    var button = {
+      width: 300,
+      marginLeft: 170
+    }
     return (
       <div>
         <h4>Sometimes it helps to write things out. Have a rage fest with yr keyboard here.</h4>
-        <form onSubmit={this.handleNewNote}>
+        <form>
           <textarea rows="5" cols="90" ref="_note"></textarea>
           <br/>
-          <button>let it go</button>
+          <Button onClick={this.handleNewNote} bsSize="sm" style={button}>let it go</Button>
         </form>
       </div>
     );
