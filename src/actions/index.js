@@ -143,3 +143,8 @@ export const addNote = (note, date) => ({
   id: v4(),
   date: date
 });
+
+export const deleteNote = (id) => ({
+  type: types.DELETE_NOTE,
+  id: id
+});

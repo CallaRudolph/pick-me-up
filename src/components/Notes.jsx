@@ -20,6 +20,7 @@ const Notes = ({ notes }) => {
           note={note.note}
           date={note.date}
           key={note.id}
+          id={note.id}
         />
       )}
     </div>

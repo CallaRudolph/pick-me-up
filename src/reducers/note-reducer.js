@@ -10,9 +10,9 @@ export default (state = [], action) => {
           date: date
         }
       ];
-    // case "CLOSE_TICKET":
-    //   const updatedTicketList = state.filter(ticket => ticket.id !== action.ticketId);
-    //   return updatedTicketList;
+    case "DELETE_NOTE":
+      const updatedNoteList = state.filter(note => note.id !== action.id);
+      return updatedNoteList;
     default:
       return state;
   }
