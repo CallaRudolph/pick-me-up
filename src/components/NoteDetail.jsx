@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { deleteNote } from './../actions';
 import { connect } from 'react-redux';
+import { Button } from "react-bootstrap";
 
 class NoteDetail extends React.Component {
 
@@ -23,11 +24,20 @@ class NoteDetail extends React.Component {
       maxWidth: 651,
       boxShadow: "1px 1px green"
     }
+    var button = {
+      width: 100,
+      float: "right",
+      marginRight: 25,
+      marginBottom: 10,
+      fontSize: 11
+    }
     return(
       <div style={note} className="panel">
         <p className="panel-heading">{this.props.note}</p>
-        <p style={time}><em>({this.props.date})</em></p>
-        <button onClick={() => {this.handleDeletingNote(this.props.id)}} >Remove Note</button>
+        <div className="row">
+          <p className="col-md-6" style={time}><em>({this.props.date})</em></p>
+          <Button style={button} className="col-md-6" bsSize="xs" onClick={() => {this.handleDeletingNote(this.props.id)}} >Remove Note</Button>
+        </div>
       </div>
     );
   }
