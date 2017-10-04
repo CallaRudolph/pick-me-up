@@ -39,7 +39,7 @@ const Display = ({ dispatch, forismatic, ron, foaas, dog }) => {
       <h4>Repeat this kind note in your head five times. Guaranteed to make things better:</h4>
       <h5>{foaasResponse.message}</h5>
       <h5>- <span style={name}>{foaasResponse.name}</span></h5>
-      <br/>
+      <br/><br/><br/>
       <a href="http://thecatapi.com"><img style={catStyle} src="http://thecatapi.com/api/images/get?format=src&type=gif"/></a>
       <img style={dogStyle} src={dogResponse.dogImage}/>
     </div>

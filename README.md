@@ -42,3 +42,6 @@ Component Structure:
 * About --> About the project and myself
 * Display --> Four API responses displayed, Input component nested
 * Input --> Input form for user to enter responses
+
+
+## You will need the Allow-Control-Allow-Origin extension for your browser.
