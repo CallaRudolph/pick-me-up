@@ -1,6 +1,7 @@
 import React from 'react';
 import TakeNotes from './TakeNotes';
 import { connect } from 'react-redux';
+import NoteDetail from './NoteDetail';
 
 const Notes = ({ notes }) => {
   var noteStyle = {
@@ -14,10 +15,13 @@ const Notes = ({ notes }) => {
     <div>
       <TakeNotes/>
       <br/><br/><br/>
-      {notes.map(function(note) {
-        return <p className="panel panel-default" style={noteStyle} key={note.id}>{note.note} - ({note.date})</p>
-        })
-      }
+      {notes.map((note) =>
+        <NoteDetail
+          note={note.note}
+          date={note.date}
+          key={note.id}
+        />
+      )}
     </div>
   );
 }
