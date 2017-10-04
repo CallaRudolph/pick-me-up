@@ -1,7 +1,6 @@
 const persistDataLocally = store => next => action => {
-  // console.log(store.getState().note);
   next(action);
-  localStorage["reduxStore"] = JSON.stringify(store.getState());
+  localStorage["reduxStore"] = JSON.stringify(store.getState().note);
   console.log("Local Storage:", localStorage["reduxStore"]);
 }
 

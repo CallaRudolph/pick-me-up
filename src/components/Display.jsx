@@ -53,7 +53,6 @@ const Display = ({ dispatch, forismatic, ron, foaas, dog }) => {
         <img style={dogStyle} src={dogResponse.dogImage}/>
         <a href="http://thecatapi.com"><img style={catStyle} src="http://thecatapi.com/api/images/get?format=src&type=gif"/></a>
         <br/><br/><br/>
-        <Input/>
       </div>
     </div>
   }

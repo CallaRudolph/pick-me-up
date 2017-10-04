@@ -10,11 +10,22 @@ function Header(props) {
     paddingBottom: 10
   }
   var navbar = {
-    backgroundColor: "#78BC61"
+    backgroundColor: "#78BC61",
+    opacity: .4,
+    // zIndex: 1,
+    // position: "relative"
+  }
+  var text = {
+    // position: "absolute",
+    // zIndex: -1,
+    // top: 0,
+    // bottom: 0,
+    // left: 0,
+    // right: 0,
   }
   return (
     <div style={navbar} className="navbar navbar-default">
-      <div className="container-fluid">
+      <div style={text} className="container-fluid">
         <div className="navbar-header">
           <h2 style={h2}>Pick Me Up</h2>
         </div>

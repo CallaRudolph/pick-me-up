@@ -34,39 +34,27 @@ class Input extends React.Component {
     this.props.dispatch(fetchRon(_rank.value));
     this.props.dispatch(fetchFoaas(_issue.value.trim(), _name.value.trim()));
     this.props.dispatch(fetchDog());
-    this.setState({formModalVisible: false});
   }
 
   render() {
     return (
       <div>
-        <Button
-          bsStyle="success"
-          onClick={this.showFormModal}>
-          Let's do this
-        </Button>
-        <Modal
-          show={this.state.formModalVisible}
-          onHide={this.hideFormModal}>
-          <Modal.Body>
-            <form>
-              <p>On a scale from 1-10, how sad are you?</p>
-              <input type="number" ref="_rank"></input>
-              <br/><br/>
-              <p>Give me the name of someone or something that is currently bugging you:</p>
-              <input ref="_issue"></input>
-              <br/><br/>
-              <p>And what's yr name?</p>
-              <input ref="_name"></input>
-              <br/><br/>
-              <Button
-                bsStyle="success"
-                onClick={this.handleSubmit}>
-                Happiness awaits
-              </Button>
-            </form>
-          </Modal.Body>
-        </Modal>
+        <form>
+          <p>On a scale from 1-10, how sad are you?</p>
+          <input type="number" ref="_rank"></input>
+          <br/><br/>
+          <p>Give me the name of someone or something that is currently bugging you:</p>
+          <input ref="_issue"></input>
+          <br/><br/>
+          <p>And what's yr name?</p>
+          <input ref="_name"></input>
+          <br/><br/>
+          <Button
+            bsStyle="success"
+            onClick={this.handleSubmit}>
+            Happiness awaits
+          </Button>
+        </form>
       </div>
     );
   }

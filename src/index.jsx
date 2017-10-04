@@ -9,23 +9,26 @@ import { HashRouter } from 'react-router-dom';
 import reducer from './reducers';
 import './images/favicon.ico';
 import persistDataLocally from './middleware/persist-local-storage-data';
+import { defaultState } from './constants/DefaultState';
 
 const loggerMiddleware = createLogger();
 
-let retrievedState;
+let retrievedNote;
 try {
-    retrievedState = localStorage.getItem("reduxStore");
-  if (retrievedState === null){
-    retrievedState = [];
+    retrievedNote = localStorage.getItem("reduxStore");
+  if (retrievedNote === null){
+    retrievedNote = [];
   }
-  retrievedState = JSON.parse(retrievedState);
+  retrievedNote = JSON.parse(retrievedNote);
 } catch (err){
-  retrievedState = [];
+  retrievedNote = [];
 }
+
+defaultState.note = retrievedNote;
 
 const store = createStore(
   reducer,
-  retrievedState,
+  defaultState,
   applyMiddleware(
     thunkMiddleware,
     loggerMiddleware,

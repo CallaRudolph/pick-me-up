@@ -29,7 +29,6 @@ const Notes = ({ notes }) => {
 
 const mapStateToProps = state => {
   const notes = state.note;
-  console.log(notes);
   return {
     notes: notes
   }
