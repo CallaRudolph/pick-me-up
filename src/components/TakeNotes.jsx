@@ -22,7 +22,7 @@ class TakeNotes extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleNewNote}>
-          <textarea ref="_note"></textarea>
+          <textarea rows="5" cols="90" ref="_note"></textarea>
           <br/>
           <button>Mark it</button>
         </form>
