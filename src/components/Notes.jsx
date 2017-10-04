@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 const Notes = ({ notes }) => {
   var noteStyle = {
     marginTop: 20,
-    color: "blue",
+    color: "grey",
     paddingLeft: 8
   }
   return (

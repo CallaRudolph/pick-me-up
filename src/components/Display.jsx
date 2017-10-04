@@ -9,12 +9,15 @@ const Display = ({ dispatch, forismatic, ron, foaas, dog }) => {
   const dogResponse = dog.dog;
   var catStyle = {
     width: 300,
-    height: 300
+    height: 300,
+    marginBottom: 20
   }
   var dogStyle = {
     paddingLeft: 10,
+    paddingRight: 10,
     maxWidth: 300,
-    maxHeight: 300
+    maxHeight: 300,
+    marginBottom: 20
   }
   var name = {
     textTransform: "capitalize"
@@ -35,13 +38,17 @@ const Display = ({ dispatch, forismatic, ron, foaas, dog }) => {
         })
       }
       </ul>
-      <br/><br/><br/>
+      <hr/>
+      <br/>
       <h4>Repeat this kind note in your head five times. Guaranteed to make things better:</h4>
-      <h5>{foaasResponse.message}</h5>
-      <h5>- <span style={name}>{foaasResponse.name}</span></h5>
+      <p>{foaasResponse.message}</p>
+      <p>- <span style={name}>{foaasResponse.name}</span></p>
       <br/><br/><br/>
+      <hr/>
       <a href="http://thecatapi.com"><img style={catStyle} src="http://thecatapi.com/api/images/get?format=src&type=gif"/></a>
       <img style={dogStyle} src={dogResponse.dogImage}/>
+      <a href="http://thecatapi.com"><img style={catStyle} src="http://thecatapi.com/api/images/get?format=src&type=gif"/></a>
+      <br/><br/><br/>
     </div>
   }
   return (

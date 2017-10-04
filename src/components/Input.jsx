@@ -50,7 +50,7 @@ class Input extends React.Component {
           <Modal.Body>
             <form>
               <p>On a scale from 1-10, how sad are you?</p>
-              <input ref="_rank"></input>
+              <input type="number" ref="_rank"></input>
               <br/><br/>
               <p>Give me the name of someone or something that is currently bugging you:</p>
               <input ref="_issue"></input>
