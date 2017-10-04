@@ -137,8 +137,9 @@ export function fetchDog() {
   };
 }
 
-export const addNote = (note) => ({
+export const addNote = (note, date) => ({
   type: types.ADD_NOTE,
   note: note,
-  id: v4()
+  id: v4(),
+  date: date
 });

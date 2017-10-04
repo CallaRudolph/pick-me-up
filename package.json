@@ -20,7 +20,8 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "uuid": "^3.1.0",
-    "react-router-dom": "^4.0.0"
+    "react-router-dom": "^4.0.0",
+    "moment": "^2.18.1"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",

@@ -6,18 +6,18 @@ const Notes = ({ notes }) => {
   var noteStyle = {
     marginTop: 20,
     color: "grey",
-    paddingLeft: 8
+    paddingLeft: 8,
+    width: "50%"
   }
+
   return (
     <div>
       <TakeNotes/>
       <br/><br/><br/>
-      <ul>
-        {notes.map(function(note) {
-          return <li className="panel panel-default list-unstyled" style={noteStyle} key={note.id}>{note.note}</li>
-          })
-        }
-      </ul>
+      {notes.map(function(note) {
+        return <p className="panel panel-default" style={noteStyle} key={note.id}>{note.note} - ({note.date})</p>
+        })
+      }
     </div>
   );
 }

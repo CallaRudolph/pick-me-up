@@ -1,12 +1,13 @@
 export default (state = [], action) => {
   switch (action.type) {
     case "ADD_NOTE":
-      const { note, id } = action;
+      const { note, id, date } = action;
       return [
         ...state,
         {
           note : note,
-          id: id
+          id: id,
+          date: date
         }
       ];
     // case "CLOSE_TICKET":

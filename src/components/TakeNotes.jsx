@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { addNote } from './../actions';
 import { Button } from "react-bootstrap";
+import Moment from "moment";
 
 class TakeNotes extends React.Component {
   constructor(props) {
@@ -11,11 +12,14 @@ class TakeNotes extends React.Component {
 
   handleNewNote(e) {
     e.preventDefault();
+    let initialDate = new Moment();
+    let date = initialDate.format("MMM Do, h:mm a");
+    console.log(date);
     let { _note } = this.refs;
     if (!_note.value.trim()) {
       return;
     }
-    this.props.dispatch(addNote(_note.value.trim()))
+    this.props.dispatch(addNote(_note.value.trim(), date))
     _note.value = "";
   }
 
