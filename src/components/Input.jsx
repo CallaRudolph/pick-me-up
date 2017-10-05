@@ -44,11 +44,19 @@ class Input extends React.Component {
 
   render() {
     var button = {
-      background: "rgba(20, 80, 54, .3)",
-      color: "#1b6f1b",
-      textShadow: "1px 0px 1px white",
+      background: "rgba(20, 70, 54, .5)",
+      color: "#efeadd",
+      textShadow: "1px 0px 1px grey",
       border: "1px solid grey",
-      boxShadow: "1px 0px 1px 1px silver"
+      boxShadow: "1px 0px 1px 1px silver",
+      fontSize: 15,
+      marginLeft: 10,
+      height: 30,
+      padding: 3,
+      paddingBottom: 4
+    }
+    var text = {
+      textShadow: "1px 0px 1px grey"
     }
     var black = {
       color: "black"
@@ -70,17 +78,21 @@ class Input extends React.Component {
         }
         <div>
           {this.state.formVisible &&
-            <form onSubmit={this.handleSubmit}>
-              <p>On a scale from 1-10, how sad are you?</p>
-              <input style={black} type="number" min="1" max="10" ref="_rank"></input>
-              <br/><br/>
-              <p>Give me the name of someone or something that is currently bugging you:</p>
-              <input style={black} ref="_issue"></input>
-              <br/><br/>
-              <p>And what's yr name?</p>
+            <form style={text} onSubmit={this.handleSubmit}>
+              <div className="row">
+                <div className="col-md-4">
+                  <p>on a scale of 1-10, how sad are you?</p>
+                  <input style={black} type="number" min="1" max="10" ref="_rank"></input>
+                </div>
+                <div className="col-md-4">
+                  <p>someone or something that is currently bugging you:</p>
+                  <input style={black} ref="_issue"></input>
+                </div>
+              </div>
+              <br/>
+              <p>your name?</p>
               <input style={black} ref="_name"></input>
-              <br/><br/>
-              <Button onClick={() => {this.hideInputForm()}} style={button}>Happiness awaits</Button>
+              <Button onClick={() => {this.hideInputForm()}} style={button}>happiness awaits</Button>
             </form>
           }
         </div>
