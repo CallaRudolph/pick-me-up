@@ -54,15 +54,14 @@ class Input extends React.Component {
       color: "black"
     }
     var bigButton = {
-      background: "rgba(20, 80, 54, .3)",
-      color: "silver",
-      textShadow: "0px 1px 1px black",
+      background: "rgba(20, 80, 54, .4)",
+      color: "#efeadd",
+      textShadow: "0px 1px 1px grey",
       border: "1px solid grey",
       boxShadow: "1px 0px 1px 0px silver",
-      marginLeft: 200,
+      marginLeft: 400,
       width: 100,
-      fontSize: 16,
-      paddingTop: 1
+      fontSize: 19
     }
     return (
       <div>

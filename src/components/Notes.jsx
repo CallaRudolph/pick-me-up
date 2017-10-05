@@ -14,7 +14,7 @@ const Notes = ({ notes }) => {
   return (
     <div>
       <TakeNotes/>
-      <br/><br/><br/>
+      <br/>
       {notes.map((note) =>
         <NoteDetail
           note={note.note}
@@ -23,6 +23,7 @@ const Notes = ({ notes }) => {
           id={note.id}
         />
       )}
+      <br/><br/><br/>
     </div>
   );
 }

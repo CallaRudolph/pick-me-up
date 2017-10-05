@@ -18,17 +18,17 @@ class NoteDetail extends React.Component {
 
   render() {
     var time = {
-      fontSize: 10,
+      fontSize: 12,
       paddingLeft: 30,
       marginTop: 10
     }
     var note = {
       maxWidth: 651,
       boxShadow: "1px 0px 1px white",
-      background: "rgba(20, 50, 54, .2)",
+      background: "rgba(20, 50, 54, .4)",
       color: "white",
       textShadow: "1px 1px 1px grey",
-      fontSize: 17
+      fontSize: 20
     }
     var button = {
       width: 40,

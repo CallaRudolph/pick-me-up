@@ -32,7 +32,8 @@ const Display = ({ dispatch, forismatic, ron, foaas, dog }) => {
   if (forismatic.forismaticId === 0) {
     formAreaContent =
     <div style={content}>
-      <h4>I get it, life is tough sometimes. Come on in and let's get happy.</h4>
+      <h2>I get it, life is tough sometimes. Come on in and let's get happy.</h2>
+      <br/>
       <Input/>
     </div>
   } else {

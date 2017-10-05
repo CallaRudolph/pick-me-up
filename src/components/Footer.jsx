@@ -12,7 +12,7 @@ const Footer = ({ dispatch, responses }) => {
     </div>
   }
   var footer = {
-    background: "rgba(20, 200, 54, .1)",
+    background: "rgba(20, 20, 20, .6)",
     borderTop: "1px solid #E7E7E7",
     textAlign: "center",
     padding: "20px",
