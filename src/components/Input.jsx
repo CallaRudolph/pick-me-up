@@ -38,10 +38,11 @@ class Input extends React.Component {
 
   render() {
     var button = {
-      background: "rgba(20, 100, 54, .2)",
+      background: "rgba(20, 80, 54, .3)",
       color: "#1b6f1b",
-      textShadow: "0px 0px 1px white",
-      border: "1px solid grey"
+      textShadow: "1px 0px 1px white",
+      border: "1px solid grey",
+      boxShadow: "1px 0px 1px 1px silver"
     }
     return (
       <div>
