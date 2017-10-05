@@ -55,17 +55,19 @@ class Input extends React.Component {
     }
     var bigButton = {
       background: "rgba(20, 80, 54, .3)",
-      color: "#1b6f1b",
-      textShadow: "1px 1px 1px white",
+      color: "silver",
+      textShadow: "0px 1px 1px black",
       border: "1px solid grey",
-      boxShadow: "1px 0px 1px 1px silver",
-      marginLeft: 100,
-      width: 300
+      boxShadow: "1px 0px 1px 0px silver",
+      marginLeft: 200,
+      width: 100,
+      fontSize: 16,
+      paddingTop: 1
     }
     return (
       <div>
         {this.state.buttonVisible &&
-          <Button style={bigButton} onClick={() => {this.showInputForm()}}>come on in</Button>
+          <Button style={bigButton} onClick={() => {this.showInputForm()}}>it gets better</Button>
         }
         <div>
           {this.state.formVisible &&
