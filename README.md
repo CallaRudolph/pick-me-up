@@ -51,7 +51,7 @@ This app uses ReactJS with Redux to save user input and make API calls with Thun
 * [The Cat API](http://thecatapi.com/) ~ random cat photos
 * [FOAAS](https://www.foaas.com/) ~ asks someone to f--- off, kindly
 * [Ron Swanson quotes](https://github.com/jamesseanwright/ron-swanson-quotes)
-* [The Dog API](random dog photos(https://www.thedogapi.co.uk/documentation.php) ~ random dog photos
+* [The Dog API](https://www.thedogapi.co.uk/documentation.php) ~ random dog photos
 
 ## Future Functionality
 
