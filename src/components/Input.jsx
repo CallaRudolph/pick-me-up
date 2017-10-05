@@ -2,23 +2,24 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchForismatic, fetchRon, fetchFoaas, fetchDog } from './../actions';
 import { Button } from "react-bootstrap";
-import { Modal } from "react-bootstrap";
 
 class Input extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {formModalVisible: false};
-    this.showFormModal = this.showFormModal.bind(this);
-    this.hideFormModal = this.hideFormModal.bind(this);
+    this.state = {
+      formVisible: false
+    };
+    this.showInputForm = this.showInputForm.bind(this);
+    this.hideInputForm = this.hideInputForm.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  showFormModal() {
-    this.setState({formModalVisible: true});
+  showInputForm() {
+    this.setState({formVisible: true});
   }
 
-  hideFormModal() {
-    this.setState({formModalVisible: false});
+  hideInputForm() {
+    this.setState({formVisible: false});
   }
 
   handleSubmit(e) {
@@ -46,22 +47,23 @@ class Input extends React.Component {
     }
     return (
       <div>
-        <form>
-          <p>On a scale from 1-10, how sad are you?</p>
-          <input type="number" min="1" max="10" ref="_rank"></input>
-          <br/><br/>
-          <p>Give me the name of someone or something that is currently bugging you:</p>
-          <input ref="_issue"></input>
-          <br/><br/>
-          <p>And what's yr name?</p>
-          <input ref="_name"></input>
-          <br/><br/>
-          <Button
-            style={button}
-            onClick={this.handleSubmit}>
-            Happiness awaits
-          </Button>
-        </form>
+        <button onClick={() => {this.showInputForm()}}>come on in</button>
+        <div>
+          {this.state.formVisible &&
+            <form onSubmit={this.handleSubmit}>
+              <p>On a scale from 1-10, how sad are you?</p>
+              <input type="number" min="1" max="10" ref="_rank"></input>
+              <br/><br/>
+              <p>Give me the name of someone or something that is currently bugging you:</p>
+              <input ref="_issue"></input>
+              <br/><br/>
+              <p>And what's yr name?</p>
+              <input ref="_name"></input>
+              <br/><br/>
+              <Button onClick={() => {this.hideInputForm()}} style={button}>Happiness awaits</Button>
+            </form>
+          }
+        </div>
       </div>
     );
   }
