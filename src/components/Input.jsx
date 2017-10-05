@@ -56,7 +56,8 @@ class Input extends React.Component {
       paddingBottom: 4
     }
     var text = {
-      textShadow: "1px 0px 1px grey"
+      textShadow: "1px 0px 1px grey",
+        fontSize: 19, 
     }
     var black = {
       color: "black"

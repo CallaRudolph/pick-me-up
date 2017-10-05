@@ -3,7 +3,7 @@ import React from 'react';
 function About(props) {
   var about = {
     color: "white",
-    fontSize: 18,
+    fontSize: 23,
     textShadow: "2px 2px 2px grey"
   }
   var link = {
@@ -12,7 +12,7 @@ function About(props) {
     textShadow: "1px 1px black"
   }
   var me = {
-    fontSize: 13,
+    fontSize: 14,
     float: "right",
     marginTop: 100
   }

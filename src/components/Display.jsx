@@ -27,30 +27,37 @@ const Display = ({ dispatch, forismatic, ron, foaas, dog }) => {
   }
   var content = {
     color: "white",
-    fontSize: 17
+    fontSize: 17,
+    textShadow: "1px 1px 1px grey"
+  }
+  var h2 = {
+    textShadow: "1px 1px 1px grey"
+  }
+  var list = {
+    fontSize: 20
   }
   if (forismatic.forismaticId === 0) {
     formAreaContent =
     <div style={content}>
-      <h2>I get it, life is tough sometimes. Come on in and let's get happy.</h2>
+      <h2 style={h2}>I get it, life is tough sometimes. Come on in and let's get happy.</h2>
       <br/>
       <Input/>
     </div>
   } else {
     formAreaContent =
     <div style={content}>
-      <h4>Sorry things are crappy today, <span style={name}>{foaasResponse.name}</span>. Ron Swanson has some thoughts for you:</h4>
+      <h2>Sorry things are crappy today, <span style={name}>{foaasResponse.name}</span>. Ron Swanson has some thoughts for you:</h2>
       <ul>
         {ronResponse.ronQuotes[0].map(function(ronQuote) {
-          return <li key={ronQuote}>{ronQuote}</li>
+          return <li style={list} className="list-unstyled" key={ronQuote}>{ronQuote}</li>
         })
       }
       </ul>
       <hr/>
       <br/>
-      <h4>Repeat this kind note in your head five times. Guaranteed to make things better:</h4>
-      <p>{foaasResponse.message}</p>
-      <p>- <span style={name}>{foaasResponse.name}</span></p>
+      <h2>Repeat this kind note in your head five times. Guaranteed to make things better:</h2>
+      <h3><em>"{foaasResponse.message}"</em></h3>
+      <h3>- <span style={name}>{foaasResponse.name}</span></h3>
       <br/>
       <hr/>
       <div style={center}>
