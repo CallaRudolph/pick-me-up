@@ -10,6 +10,7 @@ import reducer from './reducers';
 import './images/favicon.ico';
 import persistDataLocally from './middleware/persist-local-storage-data';
 import { defaultState } from './constants/DefaultState';
+import styles from './styles/styles.css';
 
 const loggerMiddleware = createLogger();
 

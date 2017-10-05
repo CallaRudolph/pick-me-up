@@ -5,14 +5,9 @@ import Display from './Display';
 import About from './About';
 import Footer from './Footer';
 import Notes from './Notes';
-import Background from './../images/background.jpg';
-import Woods from './../images/woods.jpg';
 
 function App(props) {
   var backgroundStyle = {
-    backgroundImage: "url(" + Woods + ")",
-    position: "absolute",
-    backgroundSize: "cover",
     top: 0,
     left: 0,
     width: "100%",
