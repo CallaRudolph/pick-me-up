@@ -50,22 +50,34 @@ class Input extends React.Component {
       border: "1px solid grey",
       boxShadow: "1px 0px 1px 1px silver"
     }
+    var black = {
+      color: "black"
+    }
+    var bigButton = {
+      background: "rgba(20, 80, 54, .3)",
+      color: "#1b6f1b",
+      textShadow: "1px 1px 1px white",
+      border: "1px solid grey",
+      boxShadow: "1px 0px 1px 1px silver",
+      marginLeft: 100,
+      width: 300
+    }
     return (
       <div>
         {this.state.buttonVisible &&
-          <button onClick={() => {this.showInputForm()}}>come on in</button>
+          <Button style={bigButton} onClick={() => {this.showInputForm()}}>come on in</Button>
         }
         <div>
           {this.state.formVisible &&
             <form onSubmit={this.handleSubmit}>
               <p>On a scale from 1-10, how sad are you?</p>
-              <input type="number" min="1" max="10" ref="_rank"></input>
+              <input style={black} type="number" min="1" max="10" ref="_rank"></input>
               <br/><br/>
               <p>Give me the name of someone or something that is currently bugging you:</p>
-              <input ref="_issue"></input>
+              <input style={black} ref="_issue"></input>
               <br/><br/>
               <p>And what's yr name?</p>
-              <input ref="_name"></input>
+              <input style={black} ref="_name"></input>
               <br/><br/>
               <Button onClick={() => {this.hideInputForm()}} style={button}>Happiness awaits</Button>
             </form>

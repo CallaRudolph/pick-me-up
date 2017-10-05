@@ -1,8 +1,11 @@
 import React from 'react';
 
 function About(props) {
+  var about = {
+    color: "white"
+  }
   return (
-    <div>
+    <div style={about}>
       <p>Not every day can be as lovely as the one where you had a banana split and got hugged by yr Momma. If things are rough out there, check in with a Pick Me Up.</p>
       <p>Special shout out to some cool APIs:</p>
       <ul>

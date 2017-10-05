@@ -25,15 +25,18 @@ const Display = ({ dispatch, forismatic, ron, foaas, dog }) => {
   var center = {
     textAlign: "center"
   }
+  var content = {
+    color: "white"
+  }
   if (forismatic.forismaticId === 0) {
     formAreaContent =
-    <div>
+    <div style={content}>
       <h4>I get it, life is tough sometimes. Come on in and let's get happy.</h4>
       <Input/>
     </div>
   } else {
     formAreaContent =
-    <div>
+    <div style={content}>
       <h4>Sorry things are crappy today, <span style={name}>{foaasResponse.name}</span>. Ron Swanson has some thoughts for you:</h4>
       <ul>
         {ronResponse.ronQuotes[0].map(function(ronQuote) {
@@ -46,7 +49,7 @@ const Display = ({ dispatch, forismatic, ron, foaas, dog }) => {
       <h4>Repeat this kind note in your head five times. Guaranteed to make things better:</h4>
       <p>{foaasResponse.message}</p>
       <p>- <span style={name}>{foaasResponse.name}</span></p>
-      <br/><br/><br/>
+      <br/>
       <hr/>
       <div style={center}>
         <a href="http://thecatapi.com"><img style={catStyle} src="http://thecatapi.com/api/images/get?format=src&type=gif"/></a>
