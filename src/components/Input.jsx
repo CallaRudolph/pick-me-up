@@ -7,7 +7,8 @@ class Input extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formVisible: false
+      formVisible: false,
+      buttonVisible: true,
     };
     this.showInputForm = this.showInputForm.bind(this);
     this.hideInputForm = this.hideInputForm.bind(this);
@@ -16,14 +17,12 @@ class Input extends React.Component {
 
   showInputForm() {
     this.setState({formVisible: true});
+    this.setState({buttonVisible: false});
   }
 
   hideInputForm() {
     this.setState({formVisible: false});
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
+    this.setState({buttonVisible: true});
     let { _rank, _issue, _name } = this.refs;
     if (!_issue.value.trim()) {
       return;
@@ -35,6 +34,12 @@ class Input extends React.Component {
     this.props.dispatch(fetchRon(_rank.value));
     this.props.dispatch(fetchFoaas(_issue.value.trim(), _name.value.trim()));
     this.props.dispatch(fetchDog());
+    console.log("meep");
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+
   }
 
   render() {
@@ -47,7 +52,9 @@ class Input extends React.Component {
     }
     return (
       <div>
-        <button onClick={() => {this.showInputForm()}}>come on in</button>
+        {this.state.buttonVisible &&
+          <button onClick={() => {this.showInputForm()}}>come on in</button>
+        }
         <div>
           {this.state.formVisible &&
             <form onSubmit={this.handleSubmit}>
