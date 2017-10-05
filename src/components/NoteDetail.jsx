@@ -23,7 +23,7 @@ class NoteDetail extends React.Component {
     }
     var note = {
       maxWidth: 651,
-      boxShadow: "1px 1px 1px white",
+      boxShadow: "1px 0px 1px white",
       background: "rgba(20, 50, 54, .4)",
       color: "white"
     }

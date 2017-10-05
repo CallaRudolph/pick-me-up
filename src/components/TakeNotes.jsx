@@ -26,10 +26,10 @@ class TakeNotes extends React.Component {
   render() {
     var button = {
       width: 300,
-      marginLeft: 170,
+      marginLeft: 10,
       background: "rgba(20, 300, 54, .1)",
       color: "#176117",
-      textShadow: "1px 0px grey",
+      textShadow: "1px 0px 1px grey",
       border: "1px solid grey",
       fontSize: 13
     }
@@ -42,8 +42,11 @@ class TakeNotes extends React.Component {
       borderRadius: 5,
       border: "2px solid white",
     }
+    var notes = {
+      textAlign: "center"
+    }
     return (
-      <div>
+      <div style={notes}>
         <h4 style={header}>Sometimes it helps to write things out. Have a rage fest with yr keyboard here:</h4>
         <form>
           <textarea style={area} rows="5" cols="90" ref="_note"></textarea>
