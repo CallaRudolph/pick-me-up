@@ -22,7 +22,8 @@ const Footer = ({ dispatch, responses }) => {
     height: "40px",
     width: "100%",
     paddingTop: "5px",
-    color: "white"
+    color: "white",
+    fontSize: 17
   };
   return (
     <div>

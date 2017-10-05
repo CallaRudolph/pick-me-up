@@ -26,7 +26,8 @@ const Display = ({ dispatch, forismatic, ron, foaas, dog }) => {
     textAlign: "center"
   }
   var content = {
-    color: "white"
+    color: "white",
+    fontSize: 17
   }
   if (forismatic.forismaticId === 0) {
     formAreaContent =

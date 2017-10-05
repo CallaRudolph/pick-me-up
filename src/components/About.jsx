@@ -2,7 +2,9 @@ import React from 'react';
 
 function About(props) {
   var about = {
-    color: "white"
+    color: "white",
+    fontSize: 18,
+    textShadow: "2px 2px 2px grey"
   }
   var link = {
     color: "white",
@@ -10,9 +12,9 @@ function About(props) {
     textShadow: "1px 1px black"
   }
   var me = {
-    fontSize: 10,
+    fontSize: 13,
     float: "right",
-  
+    marginTop: 100
   }
   return (
     <div style={about}>

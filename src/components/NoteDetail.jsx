@@ -19,21 +19,24 @@ class NoteDetail extends React.Component {
   render() {
     var time = {
       fontSize: 10,
-      paddingLeft: 30
+      paddingLeft: 30,
+      marginTop: 10
     }
     var note = {
       maxWidth: 651,
       boxShadow: "1px 0px 1px white",
-      background: "rgba(20, 50, 54, .4)",
-      color: "white"
+      background: "rgba(20, 50, 54, .2)",
+      color: "white",
+      textShadow: "1px 1px 1px grey",
+      fontSize: 17
     }
     var button = {
-      width: 60,
+      width: 40,
       float: "right",
       marginRight: 25,
       marginBottom: 10,
-      fontSize: 11,
-      background: "rgba(20, 100, 54, .5)",
+      fontSize: 13,
+      background: "rgba(20, 100, 54, .4)",
       color: "white",
       textShadow: "1px 0px grey",
       border: "1px solid grey"
@@ -43,7 +46,7 @@ class NoteDetail extends React.Component {
         <p className="panel-heading">{this.props.note}</p>
         <div className="row">
           <p className="col-md-6" style={time}><em>({this.props.date})</em></p>
-          <Button style={button} className="col-md-6" bsSize="xs" onClick={() => {this.handleDeletingNote(this.props.id)}} >remove</Button>
+          <Button style={button} className="col-md-6" bsSize="xs" onClick={() => {this.handleDeletingNote(this.props.id)}} >erase</Button>
         </div>
       </div>
     );

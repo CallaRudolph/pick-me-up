@@ -41,6 +41,7 @@ class TakeNotes extends React.Component {
       resize: "none",
       borderRadius: 5,
       border: "2px solid white",
+      fontSize: 20
     }
     var notes = {
       textAlign: "center"
@@ -49,7 +50,7 @@ class TakeNotes extends React.Component {
       <div style={notes}>
         <h4 style={header}>Sometimes it helps to write things out. Have a rage fest with yr keyboard here:</h4>
         <form>
-          <textarea style={area} rows="5" cols="90" ref="_note"></textarea>
+          <textarea style={area} rows="4" cols="70" ref="_note"></textarea>
           <br/>
           <Button onClick={this.handleNewNote} bsSize="sm" style={button}>let it go</Button>
         </form>
