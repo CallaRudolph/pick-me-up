@@ -7,7 +7,8 @@ function Header(props) {
     paddingRight: 15
   }
   var h2 = {
-    paddingBottom: 10
+    paddingBottom: 10,
+    fontFamily: "'Lobster', cursive"
   }
   var navbar = {
     background: "rgba(20, 200, 54, .1)",
