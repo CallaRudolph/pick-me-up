@@ -8,6 +8,18 @@ This is an app to visit when having a gloomy day. The user can input a range of 
 
 This app uses ReactJS with Redux to save user input and make API calls with Thunk Middleware. Persistent data is also stored through Middleware. React-Router and UUID are utilized for component transitions and unique state keys.
 
+## Screenshots
+
+![home](/src/images/home.png)
+
+![input](/src/images/input.png)
+
+![display](/src/images/display.png)
+
+![notes](/src/images/notes.png)
+
+![about](/src/images/about.png)
+
 ## Prerequisites
 * [Node.js](https://nodejs.org/) (with NPM)
 * In order to successfully make API calls to these APIs, make sure your browser (Chrome preferred) has a [CORS extension](https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc) installed and enabled
