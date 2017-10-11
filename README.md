@@ -3,6 +3,8 @@
 ## ReactJS Capstone Project for Epicodus, October 5, 2017
 **_By Calla Rudolph_ [(e-mail me here)](<mailto:callarudolph@gmail.com>)**
 
+Deployed app located [here](http://fast-wildwood-66953.herokuapp.com/#/) *(you must have [CORS](https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc) installed and enabled on your browser to make API calls)*
+
 ## Description
 This is an app to visit when having a gloomy day. The user can input a range of how sad he is feeling, as well as his name and something that is bothering him. The app will then make five API calls to display uplifting quotes, statements, and photos to encourage the user to feel better. There is a notes section for the user to write out how he is feeling, in order to release upsetting thoughts from his mind.
 
